@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ABOUT</title>
+	<link rel="icon" type="image/x-icon" href="https://files.catbox.moe/99iy84.jpg">
+	<style>
+	    
+	    body {
+	        margin: 0;
+	        padding: 0;
+	        width: 100vw;
+-webkit-tap-highlight-color: transparent; 
+	    }
+	    
+		#toolbar {
+			width: 100%;
+			height: 15vw;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			align-items: center;			
+			background: #54586a;
+		}
+
+
+#title {
+    width:87.5%;
+    font-size: 7vw;
+    text-align: center;
+    color: white;
+    opacity:70%;
+    
+}
+
+#email {
+    height: 10vw;
+    width: 10vw;
+    filter: opacity(80%);
+    
+}
+
+
+#email:active {
+    filter: opacity(100%);
+}
+
+
+		#logoLinear {
+			width: 100%;
+			height: 100vw;
+			display: flex;
+			flex-direction: column;
+		}
+
+		#logo {
+			width: 100%;
+			height: 100vw;
+		}
+
+		#shortDescription {
+			height: 27vw;
+			text-align: center;
+			font-size: 5vw;
+			color: #999999;
+			transform: translateY(-27vw);
+				padding-left: 6vw;
+				padding-right: 6vw;
+				
+		}
+
+		#description {
+			padding-top: 11vw;
+			padding-bottom: 11vw;
+			padding-left: 5vw;
+			padding-right: 5vw;
+			margin: 0;
+			font-size: 30px;
+			color: #555555;
+			background: #dee3dc;
+		}
+
+		#footer {
+			width: 100vw;
+			height: wrap;
+			background-color: #000000;
+			display: flex;
+			flex-direction: column;
+		}
+
+		#copyright {
+			width: 100vw;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+			font-size: 3vw;
+			color: #aaaaaa;
+			margin: 0;
+			padding-top: 3vw;
+			padding-bottom: 3vw;
+		}
+		
+
+		.social-media {
+	
+ display: flex;
+  align-items: center;
+   justify-content: center;
+    text-align: center;
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	padding-left: 4vw;
+	padding-right: 4vw;
+	padding: 1.5vw;
+	}
+	
+   
+  .social-media img:active {
+    filter: opacity(90%);
+    transform: scale(1.5);
+}
+		
+
+		
+		.social-media img {
+		border-radius: 1vw;
+			width: 5vw;
+			height: 5vw;
+			object-fit: cover;
+			margin-top: 0vw;
+			background: #ffffff;
+   	padding: 1.4vw;
+		 filter: opacity(80%);
+		}
+		
+		#design {
+			width: 100vw;
+			
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+			font-size: 3vw;
+			color: #009900;
+			margin: 0;
+			padding-top: 3vw;
+			padding-bottom: 3vw;
+		}
+	</style>
+</head>
+<body>
+	<div id="toolbar">
+	    <div id="title">BCOVATE</div>
+	    <a href="mailto:bcovate@gmail.com">
+	        <img id="email" src="https://files.catbox.moe/3jc7d3.png" alt="email">
+	    </a>
+	</div>
+	
+	<div id="logoLinear">
+	    
+		<img id="logo" src="https://files.catbox.moe/99iy84.jpg" alt="Logo">
+		
+		<p id="shortDescription">Project Manager, Software Engineer, and Designer</p>
+		
+	</div>
+	
+	<p id="description">Hi, I’m Bcovate. I’m a project manager. I am a fan of design, entrepreneurship, and innovation. You can visit my social Media accounts here:</p>
+	
+	<div id="footer">
+	    
+		<p id="copyright">BCOVATE • © 2023 - Version 1.0</p>
+		<div class="social-media" id="social-media-list">
+		</div>
+		<p id="design">Design by Bader Charaf</p>
+	</div>
+	
+		<script>
+const socialMediaList = [
+	{
+		link: "https://www.facebook.com/bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/2175/2175193.png"
+	},
+	
+	{
+		link: "https://instagram.com/bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/1384/1384015.png"
+		},
+	
+	{
+		link: "https://twitter.com/bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/1384/1384017.png"
+	},
+	
+	{
+		link: "https://www.snapchat.com/add/bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/2175/2175225.png"
+	},
+	
+	{
+		link: "https://tiktok.com/@bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/3116/3116491.png"
+	},
+	
+	{
+		link: "https://github.com/bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/2111/2111432.png"
+	},
+	
+	{
+		link: "https://t.me/bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/2111/2111710.png"
+	},
+	
+	{
+		link: "https://discord.com/users/bcovate",
+		icon: "https://cdn-icons-png.flaticon.com/512/5968/5968968.png"
+	},
+	
+{
+		link: "whatsapp://send/?phone=XXXXXXXXXX",
+		icon: "https://cdn-icons-png.flaticon.com/512/1384/1384007.png"
+	}
+];
+
+
+		const socialMediaContainer = document.getElementById('social-media-list');
+		socialMediaList.forEach(item => {
+		
+			const linkElement = document.createElement('a');
+linkElement.href = item.link;
+
+const imgElement = document.createElement('img');
+imgElement.src = item.icon;
+
+linkElement.appendChild(imgElement);
+socialMediaContainer.appendChild(linkElement);
+	socialMediaContainer.appendChild(linkElement);
+		});
+		
+  
+	</script>
+
+	
+</body>
+
+</html>
