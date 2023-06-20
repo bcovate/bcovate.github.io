@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BCOVATE</title>
+	<link rel="icon" type="image/x-icon" href="https://files.catbox.moe/99iy84.jpg">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#header {
+			width: 100%;
+			height: 15vw;
+			background: #54586A;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		#title {
+			width: 100%;
+			height: wrap;
+			text-align: center;
+			font-size: 5vw;
+			color: #FFFFFF;
+			opacity: 0.7;
+		}
+
+	#email {
+			height: 8vw;
+			width: 8vw;
+			filter: opacity(80%);
+			margin: 3vw;
+		}
+
+		#email:active {
+			filter: opacity(100%);
+		}
+
+		#logo {
+			width: 100vw;
+			height: 50vw;
+			background: #252525;
+		}
+
+		#shortDescription {
+			padding: 5vw;
+			text-align: center;
+			font-size: 4vw;
+			color: #999999;
+		}
+
+		#description {
+			padding: 5vw;
+			background: #DEE3DC;
+			font-size: 5;
+			color: #555555;
+		}
+
+		#footer {
+			width: 100%;
+			height: 100%;
+			background: #000000;
+			display: flex;
+			flex-direction: column;
+		}
+
+		#copyright {
+			width: 100%;
+			padding: 0;
+			padding-top: 1vw;
+			text-align: center;
+			font-size: 4vw;
+			color: #AAAAAA;
+		}
+
+		.social-media {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.social-media img:active {
+			filter: opacity(90%);
+			background: #95cdff;
+		}
+
+		.social-media img {
+			border-radius: 1vw;
+			width: 30vw;
+			height: 5vw;
+			object-fit: contain;
+			margin-top: 0vw;
+			background: #ffffff;
+			padding: 1vw;
+			filter: opacity(80%);
+			margin-top: 1.5vw;
+			margin-bottom: 1.5vw;
+		}
+
+
+		#design {
+			width: 100%;
+			padding: 0;
+			padding-bottom: 1vw;
+			text-align: center;
+			font-size: 3.5vw;
+			color: #4DB6AC;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="title">BCOVATE</div>
+		<img id="email" src="https://files.catbox.moe/3jc7d3.png" alt="email">
+	</div>
+
+	<img id="logo" src="https://files.catbox.moe/r51itx.jpg">
+
+	<div id="shortDescription">Project Manager, Software Engineer, and Designer</div>
+
+	<div id="description">
+		Hi, I’m Bcovate. I’m a project manager. I am a fan of design, entrepreneurship, and innovation. You can visit my social Media accounts here:
+	</div>
+
+	<div id="footer">
+		<p id="copyright">BCOVATE • © 2023 - Version 1.1</p>
+		<div class="social-media" id="social-media-list"></div>
+		<p id="design">Design by Bader Charaf</p>
+	</div>
+
+	<script>
+		const socialMediaList = [
+			{
+				link: "https://www.facebook.com/bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/2175/2175193.png",
+				alt: "facebook"
+			},
+			{
+				link: "https://instagram.com/bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/1384/1384015.png",
+				alt: "instagram"
+			},
+			{
+				link: "https://twitter.com/bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/1384/1384017.png",
+				alt: "twitter"
+			},
+			{
+				link: "https://snapchat.com/add/bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/2175/2175225.png",
+				alt: "snapchat"
+			},
+			{
+				link: "https://tiktok.com/@bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/3116/3116491.png",
+				alt: "tiktok"
+			},
+			{
+				link: "https://github.com/bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/2111/2111432.png",
+				alt: "github"
+			},
+			{
+				link: "https://t.me/bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/2111/2111710.png",
+				alt: "telegram"
+			},
+			{
+				link: "https://discord.com/users/bcovate",
+				icon: "https://cdn-icons-png.flaticon.com/512/5968/5968968.png",
+				alt: "discord"
+			},
+			{
+				link: "whatsapp://send/?phone=XXXXXXXXXX",
+				icon: "https://cdn-icons-png.flaticon.com/512/1384/1384007.png",
+				alt: "whatsapp"
+			},
+			{
+				link:				"https://pinterest.fr/bcovate",
+	    icon:"https://cdn-icons-png.flaticon.com/512/37/37929.png",
+	    alt:"pinterest"
+	}
+];
+
+
+		const socialMediaContainer = document.getElementById('social-media-list');
+
+socialMediaList.forEach(item => {
+  const imgElement = document.createElement('img');
+  imgElement.src = item.icon;
+  imgElement.alt = item.alt;
+
+  socialMediaContainer.appendChild(imgElement);
+
+  
+  imgElement.addEventListener('click', () => {
+   
+    window.location.href = item.link;
+    
+  });
+});
+
+  document.getElementById('email').onclick = function() {
+    window.open('mailto:bcovate@gmail.com', '_blank');
+  };
+
+
+	</script>
+</body>
+</html>
