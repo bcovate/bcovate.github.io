@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+    
+    <style>
+        
+        body {
+			margin: 0;
+			padding: 0;
+			background: #fefaf1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			user-select: none;
+		}
+            	
+          
+        
+         #pageName {
+         padding: 0;
+         margin: 0;
+             width: 100vw;
+             height: 15vw;
+             color: #444444;
+             display: flex;
+		        	flex-direction: column;
+		          	align-items: center;
+             justify-content: center;
+             font-size: 6vw;
+           
+			
+         }
+         
+         #line {
+             padding: 0;
+             margin-bottom: 0;
+             width: 100vw;
+             height: 0.4vw;
+             background: black;
+             filter:opacity(50%);
+         }
+         
+          #background {
+              margin: 5vw;
+              padding: 5vw;
+              background: #eae6dd;
+              width: 80vw;
+              height: 100%;
+              display: flex;
+		          	flex-direction: column;
+              align-items: center;
+              border: 0.5vw solid #b7b3aa;
+              border-radius: 2vw;
+              box-shadow: 0 2px 8px #bbbbbb;
+             }
+          
+          #fullName,#email,
+          #subject, #message {
+               width: 90%;
+               height: 10vw;
+               margin-left: 5vw;
+               margin-right: 5vw;
+               padding-left: 3vw;
+               padding-right: 3vw;
+               color: #555555;
+               background: #c8c4bb;
+               border: 0;
+               border: 0.3vw solid #959188;
+               border-radius: 1vw;
+               margin-bottom: 4vw;
+               font-size: 4vw;
+              }
+           
+  #fullName::placeholder,
+  #email::placeholder,
+  #subject::placeholder,
+  #message::placeholder {
+  color: #888888;
+  }
+           
+           
+            #email {
+           }
+            
+             #subject {
+            }
+             
+              #message {
+                  height: 30vw;
+                 resize: none;
+                 padding-top: 2vw;
+                 font-size: 3.5vw;
+              }
+              
+               #submit {
+               width: 100%;
+               height: 15vw;
+               background: #6a96c5;
+               border-radius: 1vw;
+               border: 0;
+               color: #ffffff;
+               font-size: 3.5vw;
+               }
+               
+               #submit:active {
+                   
+                   filter:opacity(80%);
+                   
+               }
+               
+    </style>
+    
+</head>
+<body>
+    <p id="pageName">CONTACT US</p>
+    <div id="line"></div>
+    <div id="background">
+        
+    <input id="fullName" maxlength="30" placeholder="Your full name"/>
+    
+    <input id="email" type="email" maxlength="30" placeholder="youremail@email.com"/>
+    
+    <input id="subject" maxlength="30" placeholder="Subject"/>
+    
+    <textarea id="message" maxlength="200" placeholder="Put your message with details"></textarea>
+    
+    <button id="submit" type="button">SUBMIT</button>
+    </div>
+    
+    
+    <script>
+        
+        document.getElementById('submit').onclick = function() {
+        
+        
+var flnm = document.getElementById('fullName').value;
+var eml = document.getElementById('email').value;
+var sbjct = document.getElementById('subject').value;
+var msg = document.getElementById('message').value;
+        
+ var text = `fullName: ${flnm}
+email: ${eml}
+subject: ${sbjct}
+message: ${msg}`;
+        
+        
+
+if (flnm !== '' && eml !== '' && sbjct !== '' && msg !== '') {
+
+        const botToken = '5951925497:AAE0bTsrxCs8ZbQvTpfZOCHiLefd9cvfRDc';
+const chatId = '1391324027';
+const messageText = 'MESSAGE_TEXT';
+
+const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+const data = new URLSearchParams();
+data.append('chat_id', chatId);
+data.append('text', text);
+
+fetch(url, {
+  method: 'POST',
+  body: data,
+})
+  .then(response => {
+    alert(`Your message has been sent successfully.
+If we need information,
+We will try to contact you
+shortest time.`);
+
+fullNameInput = '';
+emailInput = '';
+subjectInput = '';
+messageInput = '';
+
+  })
+  .catch(error => {
+    alert('Your message could not be sent, try again later');
+  });
+        
+        } else {
+
+alert('There is an empty field!');
+
+}
+        
+        };
+    </script>
+    
+</body>
+</html>
