@@ -12,63 +12,27 @@
 		body {
 			margin: 0;
 			padding: 0;
-			background: #fefaf1;
+			background: #e6e6e6;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			user-select: none;
 		}				
 
-		#title {
-			width: 100vw;
-			height: 18vw;
-			background: #eae6dd;
-			font-size: 6vw;
-			color: #444444;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			box-shadow: 0 0.5vw 2vw #777777;
-			font-family: font;
-		}
-
-
-
-			#shortDescription {
-			width: 100vw;
-			padding: 0;
-			padding-top:15vw;
-			padding-bottom:15vw;
-			margin: 0;
-			#margin-top: 15vw;
-			text-align: center;
-			font-size: 7vw;
-			color: #666666;
-			font-family: font;
-			}
-			
-			
 			#logo {
-    width: 80vw;
-    height: 40vw;
+    width: 100vw;
+    height: 50vw;
     background-size: cover;
     background-position: center;
     background-color: #191919;
-		background-image: url(/src/logo-cover.jpg);
-		border-radius: 3vw;
-		
-		transition: scale 0.4s ease;
+		background-image: url(https://bcovate.online/src/logo-cover.jpg);
 		}
-
-
-   #logo:active {
-    scale:0.9;
-    }
+    
 
 		#services {
 			width: 100vw;
 			    padding: 0;
-			    padding-top:15vw;
+			    padding-top:10vw;
 			    padding-bottom:10vw;
 			margin: 0;
 			text-align: center;
@@ -79,22 +43,21 @@
 
 		#description {
 			padding: 5vw;
-			background: #eae6dd;
-			font-size: 15px;
+			font-size: 4vw;
 			color: #555555;
 			font-family: font;
+			background-color: #dddddd;
 		}
 
 		#footer {
 			width: 100%;
 			height: wrap;
-			background-color:rgba(0,0,0,0.15);
-			padding-bottom: 4vw;
+			padding-bottom: 0vw;
 		}
 
-      #buttons {
+      #menu {
           padding-top: 2vw;
-        padding-bottom: 2vw;
+          padding-bottom: 2vw;
       }
 
 #button {
@@ -108,10 +71,11 @@
         padding-left: 4vw;
         box-sizing: border-box;
         font-family: font;
+        color: #191919;
     }
 
       #button:active {
-        background-color:rgba(0,0,0,0.15);
+        background-color: #cccccc;
       }
 
       #line {
@@ -148,111 +112,74 @@
 		}		
 
 		.social-media div:active {
-			border-radius: 30%;
+			border-radius: 50%;
 		}
 
     #copyright {
 			width: 100%;
 			padding: 0;			
 			text-align: center;
-			font-size: 1vw;
+			font-size: 2vw;
 			color: black;
 			opacity: 0.5;
-			margin-top: 8vw;
-			margin-bottom: 4vw;
-			font-family: font;
+			margin-top: 5vw;
+			margin-bottom: 5vw;
+			font-family: font;			
 		}
 
-		#design {
-			width: 100%;
-			padding: 0;
-			text-align: center;
-			font-size: 3vw;
-			color: #4DB6AC;
-			font-family: font;
-		}
-		
-		#name {
-		    color:rgba(0,0,0,0.4);
-		    background-color:rgba(0,0,0,0.15);
-		    border-radius: 1vw;
-		    padding-left: 1.5vw;
-		    padding-right: 1.5vw;
-		    padding-top: 0.6vw;
-		    padding-bottom: 0.6vw;
-		    font-family: font;
-		}
-		
-		#name:active {		
-			filter:opacity(0.5);
-			
-			
-		}
-		
-	</style>
+</style>
 </head>
 <body>
     
-		<div id="title">BCOVATE</div>
-	</div>
-	
-	<p id="shortDescription">Make your life easier</p>
+    
 	<div id="logo"></div>
 
-	<pre id="services">#Project Manager
-
-#Software Engineer
-
-#Android apps development
-
-#Web pages development
-
-#Logo design
-
-#Artwork design
-
-#Music production
-
-#Selling cosmetics</pre>
-	
+	<pre id="services">Get all your work done from one place</pre>
+	<div id="line"></div>
 	<div id="description">
-		Hi, I’m Bcovate. I’m a project manager. I am a fan of design, entrepreneurship, and innovation. You can visit my social Media accounts here:
+		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses. You can get to know us more, via:
 	</div>
-
+  <div id="line"></div>  
 	<div id="footer">
-  <div class="buttons" id="buttons"></div>
-  <div id="line"></div>
+  <div class="buttons" id="menu"></div>
+  <div id="line"></div>  
 		<div class="social-media" id="social-media-list"></div>
-		<p id="copyright">BCOVATE • © 2023 - Version 1.4</p>
-		<pre id="design">DESIGN & CODE by: <span id="name">Bader Charaf</span></pre>
+		<p id="copyright">BCOVATE • © 2023 - Version 1.5</p>
 	</div>
 	<script>
 	
 		
 		const buttonsList = [{	
-pageLink:"about",
+pageLink:"/about",
 pageName: "About Us"
 },{	
-pageLink:"services",
+pageLink:"/contact",
+pageName: "Contact Us"
+},{	
+pageLink:"/services",
 pageName: "Our Services"
 },{	
-pageLink:"faq",
-pageName: "FAQ"
+pageLink:"/products",
+pageName: "Our Products"
 },{	
-pageLink:"Terms-and-Conditions",
+pageLink:"/managers",
+pageName: "Company Managers"
+},{	
+pageLink:"/hq",
+pageName: "Headquarters/Address"
+},{	
+pageLink:"/Terms-and-Conditions",
 pageName: "Terms and Conditions"
 },{	
-pageLink:"privacy-policy",
+pageLink:"/privacy-policy",
 pageName: "Privacy Policy"
 },{	
-pageLink:"contact",
-pageName: "Contact Us"
+pageLink:"/faq",
+pageName: "FAQ"
 }];
 
 
-
-
-		const buttons = document.getElementById('buttons');
+		const menu = document.getElementById('menu');
 		
 buttonsList.forEach(item => {
 
@@ -262,10 +189,10 @@ buttonsList.forEach(item => {
   
   pElement.textContent = item.pageName;
   
-  buttons.appendChild(pElement);
+  menu.appendChild(pElement);
 
   pElement.addEventListener('click', () => {
-    window.location.href = '/' + item.pageLink;
+    window.location.href = item.pageLink;
   });
  });
  
@@ -349,11 +276,6 @@ socialMediaList.forEach(item => {
  });
 
 
-  document.getElementById('name').onclick = function() {
-    window.open('https://badercharaf.github.io');
-  };
-
-
-	</script>
+</script>
 </body>
 </html>
