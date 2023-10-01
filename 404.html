@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR 404</title>
+    
+    <style>
+        
+        body {
+			margin: 0;
+			padding: 0;
+			background: #e6e6e6;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			user-select: none;
+			justify-content: center;
+			height: 100vh;
+			width: 100vw;
+			
+		}				
+        
+        #error {
+            font-size: 7vw;
+            margin: 0;
+            margin-bottom: 20vw;
+            text-align: center;
+            width: 100%;
+            text-align: center;
+        }
+        
+        #title {
+        font-size: 5vw;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 20vw;
+            color: rgba(255,0,0,0.5);
+            width: 100%;
+            text-align: center;
+        }
+        
+        #description {
+            font-size: 4vw;
+            padding: 0 8vw 0 8vw;
+            margin: 0;
+            margin-bottom: 20vw;
+            text-align: center;
+            color: rgba(0,0,0,0.7);
+        }
+        
+        #button {
+        font-size: 5vw;
+        color: #5dacff;
+            margin: 0;
+            margin-bottom: 20vw;
+            padding: 0;
+            padding: 3vw 0 3vw 0;
+            border: 0.5vw solid #5dacff;
+            border-radius: 2vw;
+            text-align: center;
+            width: 40%;
+        }
+        
+        #button:active {
+            background: #5dacff;
+            color: #e6e6e6;
+        }
+    </style>
+    
+</head>
+<body>
+    <p id="error">ERROR 20²+2²</p>
+    <p id="title">Page not found!</p>
+    <p id="description">The page you are trying to access is incorrect or has not been created yet.</p>
+    <p id="button">BACK</p>
+    
+    <script>
+        
+        document.getElementById('button').addEventListener('click', () => {
+    window.location.href = '/';
+  });
+        
+    </script>
+    
+</body>
+</html>
