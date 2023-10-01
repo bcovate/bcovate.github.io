@@ -12,7 +12,7 @@
 		body {
 			margin: 0;
 			padding: 0;
-			background: #e6e6e6;
+			background: #ffffff;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -21,19 +21,19 @@
 
 			#logo {
     width: 100vw;
-    height: 50vw;
+    height: 76vw;
     background-size: cover;
     background-position: center;
-    background-color: #191919;
-		background-image: url(https://bcovate.online/src/logo-cover.jpg);
+    background-color: #eee;    
+		background-image: url(/src/logo-in-wall.jpg);
 		}
     
 
-		#services {
+		#title {
 			width: 100vw;
 			    padding: 0;
-			    padding-top:10vw;
-			    padding-bottom:10vw;
+			    padding-top:5vw;
+			    padding-bottom:5vw;
 			margin: 0;
 			text-align: center;
 			font-size: 4vw;
@@ -43,10 +43,9 @@
 
 		#description {
 			padding: 5vw;
-			font-size: 4vw;
+			font-size: 1.5vw;
 			color: #555555;
 			font-family: font;
-			background-color: #dddddd;
 		}
 
 		#footer {
@@ -75,14 +74,14 @@
     }
 
       #button:active {
-        background-color: #cccccc;
+        background-color: #eee;
       }
+      
 
       #line {
-          width: 100vw;
+          width: 95vw;
           height: 0.3vw;
-          background: black;
-          opacity: 0.5;
+          background: rgba(0,0,0,0.5);
       }
 
 
@@ -91,19 +90,19 @@
 			flex-direction: row;
 			align-items: center;
 			display: grid;
-			grid-template-columns: repeat(6, 1fr);
+			grid-template-columns: repeat(8, 1fr);
 			justify-items: center;
-			padding-left: 3vw;
-			padding-right: 3vw;
-			
+			padding-left: 2vw;
+			padding-right: 2vw;
+			background-color: #eee;
 		}
 
 		.social-media div {
-			width: 10vw;
-			height: 10vw;
+			width: 8vw;
+			height: 8vw;
 			padding: 0;
 			filter: opacity(80%);
-			margin-top: 5vw;
+			margin-top: 4vw;
 			border: 0.3vw solid black;
 			border-radius: 10%;
 			background-size: cover;
@@ -117,34 +116,32 @@
 
     #copyright {
 			width: 100%;
-			padding: 0;			
+			padding: 0;
+			margin: 0;
 			text-align: center;
-			font-size: 2vw;
-			color: black;
-			opacity: 0.5;
-			margin-top: 5vw;
-			margin-bottom: 5vw;
+			font-size: 1vw;
+			color: rgba(0,0,0,0.5);
+			padding-top: 5vw;
+			padding-bottom: 5vw;
 			font-family: font;			
+			background-color: #eee;
 		}
 
 </style>
 </head>
 <body>
     
-    
+  <pre id="title">Get all your work done from one place</pre>
 	<div id="logo"></div>
 
-	<pre id="services">Get all your work done from one place</pre>
-	<div id="line"></div>
 	<div id="description">
 		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses. You can get to know us more, via:
 	</div>
   <div id="line"></div>  
 	<div id="footer">
   <div class="buttons" id="menu"></div>
-  <div id="line"></div>  
 		<div class="social-media" id="social-media-list"></div>
-		<p id="copyright">BCOVATE • © 2023 - Version 1.5</p>
+		<p id="copyright">BCOVATE • © 2023 - Version 1.6</p>
 	</div>
 	<script>
 	
@@ -197,66 +194,48 @@ buttonsList.forEach(item => {
  });
  
 		
-const socialMediaList = [{	
-"link":"https://www.facebook.com/bcovate",
-"icon":"fb",
-"alt": "facebook"
-},{	
-"link":"https://instagram.com/bcovate",
-"icon":"ig",
-"alt":"instagram"
-},{	
-"link":"https://www.threads.net/@bcovate",	
-"icon":"threads",
-"alt":"threads"
-},{	
-"link":"https://twitter.com/bcovate",	
-"icon":"tw",
-"alt":"twitter"
-},{	
-"link":"https://snapchat.com/add/bcovate",
-"icon": "sc",
-"alt":"snapchat"
-},{	
-"link":"https://tiktok.com/@bcovate",	
-"icon":"tt",
-"alt":"tiktok"
-},{	
-"link":"https://github.com/bcovate",
-"icon":"gh",
-"alt":"github"
-},{	
-"link": "https://t.me/bcovate",	
-"icon":"tg",
-"alt":"telegram"
-},{	
-"link":"https://discord.com/users/bcovate",
-"icon":"dc",
-"alt":"discord"
-},{	
-"link":"whatsapp://send/?phone=XXXXXXXXXX",
-"icon":"wa",
-"alt":"whatsapp"
+const socialMediaList = [{
+  "link":"https://www.facebook.com/bcovate",
+  "icon":"fb"
 },{
-"link":"https://pinterest.fr/bcovate",
-"icon":"pt",	
-"alt":"pinterest"	
+  "link":"https://instagram.com/bcovate",
+  "icon":"ig"
 },{
-"link":"reddit.com/u/bcovate",
-"icon":"rd",
-"alt":"reddit"
+  "link":"https://twitter.com/bcovate",
+  "icon":"tw"
 },{
-"link":"https://www.linkedin.com/in/bcovate",
-"icon":"li",
-"alt":"linkedin"
+  "link":"https://snapchat.com/add/bcovate",
+  "icon":"sc"
 },{
-"link":"https://mastodon.online/@bcovate",
-"icon":"mtd",
-"alt":"mastodon"
+  "link":"https://tiktok.com/@bcovate",
+  "icon":"tt"
 },{
-"link":"https://youtube.com/@bcovate",
-"icon":"yt",
-"alt":"youtube"
+  "link":"https://github.com/bcovate",
+  "icon":"gh"
+},{
+  "link":"https://t.me/bcovate",
+  "icon":"tg"
+},{
+  "link":"https://discord.com/users/bcovate",
+  "icon":"dc"
+},{
+  "link":"whatsapp://send/?phone=XXXXXXXXXX",
+  "icon":"wa"
+},{
+  "link":"https://pinterest.fr/bcovate",
+  "icon":"pt"
+},{
+  "link":"https://reddit.com/u/bcovate",
+  "icon":"rd"
+},{
+  "link":"https://www.linkedin.com/in/bcovate",
+  "icon":"li"
+},{
+  "link": "https://mastodon.online/@bcovate",
+  "icon": "mtd"
+},{
+  "link":"https://youtube.com/@bcovate",
+  "icon":"yt"
 }];
 
 
@@ -266,7 +245,9 @@ socialMediaList.forEach(item => {
 
   const divElement = document.createElement('div');
   
-  divElement.style.backgroundImage = 'url(' + '/src/' + item.icon + '.png)';
+  var url = 'url(' + '/src/' + item.icon + '.png)'
+  
+  divElement.style.backgroundImage = url;
   
   socialMediaContainer.appendChild(divElement);
 
@@ -274,7 +255,6 @@ socialMediaList.forEach(item => {
     window.open(item.link);
   });
  });
-
 
 </script>
 </body>
