@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>BCOVATE</title>
-	<link rel="icon" type="image/x-icon" href="/src/logo-square.jpg">
+	<link rel="icon" type="image/x-icon" href="/src/logo-square.ico">
 	<style>
 
      @font-face {
@@ -141,17 +141,20 @@
 	<div id="footer">
   <div class="buttons" id="menu"></div>
 		<div class="social-media" id="social-media-list"></div>
-		<p id="copyright">BCOVATE • © 2023 - Version 1.6</p>
+		<p id="copyright">BCOVATE • © 2023 - Version 1.7</p>
 	</div>
 	<script>
 	
 		
 		const buttonsList = [{	
 pageLink:"/about",
-pageName: "About Us"
+pageName: "About Us "
 },{	
 pageLink:"/contact",
 pageName: "Contact Us"
+},{	
+pageLink:"/join-our-team",
+pageName: "Join Our Team"
 },{	
 pageLink:"/services",
 pageName: "Our Services"
@@ -245,9 +248,9 @@ socialMediaList.forEach(item => {
 
   const divElement = document.createElement('div');
   
-  var url = 'url(' + '/src/' + item.icon + '.png)'
+  var imgUrl = 'url(' + '/src/' + item.icon + '.png)'
   
-  divElement.style.backgroundImage = url;
+  divElement.style.backgroundImage = imgUrl;
   
   socialMediaContainer.appendChild(divElement);
 
