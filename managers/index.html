@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Managers</title>
+	<link rel="icon" type="image/x-icon" href="/src/logo-square.ico">
+</head>
+
+    <style>
+        
+        body {
+         margin: 0;
+         padding: 0;        
+			    width: 100vw;   
+			 background: #27374D;
+			 user-select: none;
+        }
+        
+        
+        #title {
+            margin: 0;
+            padding: 5vw 0 5vw 0;
+            font-size: 5vw;
+            text-align: center;
+            width: 100vw;
+            color: #DDE6ED;
+            opacity: 60%;
+        }
+        
+        
+        #managers {
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+           display: flex;
+			    flex-direction: column;
+			    justify-content: center; 
+			    align-items: center;
+        }
+        
+        
+        #card {
+          margin: 0 0 5vw 0;
+          padding: 0;
+          border-radius: 2vw;
+          width: 80vw;
+         display: flex;
+			    flex-direction: column;
+			    justify-content: center; 
+			    align-items: center;
+			    background-color: #526D82;
+			    transition: scale 0.2s ease;
+        }
+        
+        
+        #card:active {
+        
+        scale: 95%;
+        
+        }
+        
+        
+        #img {
+        width: 30vw;
+        height: 30vw;
+        background-color: #191919;
+        margin: 10vw;
+        padding: 0;
+        border-radius: 15vw;
+        background-size: cover;
+        }
+        
+        
+        #name {
+            color: red;
+            font-size: 7vw;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            opacity: 50%;
+        }
+        
+        
+        #role {
+        font-size: 4vw;
+        margin: 0 0 3vw 0;
+        padding: 5vw;
+        color: #ffffff;
+        opacity: 40%;
+        }
+        
+    </style>
+
+<body>
+    <p id="title">COMPANY MANAGERS</p>
+    <div id="managers"></div>
+    </div>
+    
+    <script>
+        
+        const buttonsList = [{
+name:"Bader Charaf",
+role:"Website designer, Coder",
+img:"url('https://badercharaf.github.io/src/logo-square.jpg')",
+url:"https://bit.ly/badercharaf"
+},{	
+name:"Walid Chafai",
+role:"Graphic Designer",
+img:"url('https://files.catbox.moe/sx7uhu.png')",
+url:""
+},{	
+name:"Daoum",
+role:"Producer, BeatMaker",
+img:"url('https://files.catbox.moe/pqilis.png')",
+url:""
+}];
+
+
+		const managers = document.getElementById('managers');
+		
+buttonsList.forEach(item => {
+
+
+  const img = document.createElement('div');
+  img.id = 'img';
+  img.style.backgroundImage = item.img;
+
+  const name = document.createElement('p');
+  name.id = 'name';
+  name.textContent = item.name;
+  
+  
+  const role = document.createElement('p');
+  role.id = 'role';
+  role.textContent = item.role;
+  
+  
+  const card = document.createElement('div');
+  card.id = 'card';
+  
+  card.appendChild(img);
+  card.appendChild(name);
+  card.appendChild(role);
+  managers.appendChild(card);
+  
+  
+  card.addEventListener('click', () => {
+  
+  if (item.url) {
+  
+    window.open(item.url);
+    
+    } else {
+    
+        alert('The link has not been prepared yet');
+    }
+    
+  });
+
+ });
+        
+    </script>
+</body>
+</html>
