@@ -124,6 +124,89 @@
 			font-family: font;	
 		}
 
+
+
+#mTitle {
+            margin: 0;
+            padding: 5vw 0 5vw 0;
+            font-size: 5vw;
+            text-align: center;
+            width: 100vw;
+            color: #DDE6ED;
+            opacity: 60%;
+        }
+        
+        
+        #managers {
+            width: 100vw;
+            margin: 0;
+            padding: 0 0 0 5vw;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+        }
+        
+        
+        #card {
+          margin: 0 5vw 0 0;
+          padding: 0;
+          border-radius: 2vw;
+          min-width: 80vw;
+          height: wrap;
+         display: flex;
+			    flex-direction: column;
+			    justify-content: center; 
+			    align-items: center;
+			    background-color: #526D82;
+			    transition: scale 0.2s ease;
+        }
+        
+        
+        #card:active {
+        
+        scale: 95%;
+        
+        }
+        
+        
+        #img {
+        width: 30vw;
+        height: 30vw;
+        background-color: #191919;
+        margin: 10vw;
+        padding: 0;
+        border-radius: 15vw;
+        background-size: cover;
+        }
+        
+        
+        #name {
+            color: red;
+            font-size: 7vw;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            opacity: 50%;
+        }
+        
+        
+        #role {
+        font-size: 4vw;
+        margin: 0 0 3vw 0;
+        padding: 5vw;
+        color: #ffffff;
+        opacity: 40%;
+        overflow-wrap: break-word;
+        }
+
+
+
+
 </style>
 </head>
 <body>
@@ -135,6 +218,11 @@
 		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses. You can get to know us more, via:
   </div>
   <div class="buttons" id="menu"></div>
+  
+  <p id="mTitle">COMPANY MANAGERS</p>
+    <div id="managers"></div>
+    </div>
+  
 	<div id="footer">
 		<div class="social-media" id="social-media-list"></div>
 		<p id="copyright">BCOVATE • © 2023</p>
@@ -157,9 +245,9 @@ pageName: "Our Services"
 },{	
 pageLink:"/products",
 pageName: "Our Products"
-},{	
+/*},{	
 pageLink:"/managers",
-pageName: "Company Managers"
+pageName: "Company Managers"*/
 },{	
 pageLink:"/hq",
 pageName: "Headquarters/Address"
@@ -254,6 +342,70 @@ socialMediaList.forEach(item => {
     window.open(item.link);
   });
  });
+
+
+const mList = [{
+name:"Bader Charaf",
+role:"Website designer, Coder",
+img:"url('https://badercharaf.github.io/src/logo-square.jpg')",
+mUrl:"https://bit.ly/badercharaf"
+},{	
+name:"Walid Chafai",
+role:"Graphic Designer",
+img:"url('https://files.catbox.moe/sx7uhu.png')",
+mUrl:""
+},{	
+name:"Daoum",
+role:"Producer, BeatMaker",
+img:"url('https://files.catbox.moe/pqilis.png')",
+mUrl:""
+}];
+
+
+		const managers = document.getElementById('managers');
+		
+mList.forEach(item => {
+
+
+  const img = document.createElement('div');
+  img.id = 'img';
+  img.style.backgroundImage = item.img;
+
+  const name = document.createElement('p');
+  name.id = 'name';
+  name.textContent = item.name;
+  
+  
+  const role = document.createElement('p');
+  role.id = 'role';
+  role.textContent = item.role;
+  
+  
+  const card = document.createElement('div');
+  card.id = 'card';
+  
+  card.appendChild(img);
+  card.appendChild(name);
+  card.appendChild(role);
+  managers.appendChild(card);
+  
+  
+  card.addEventListener('click', () => {
+  
+  if (item.mUrl) {
+  
+    window.open(item.mUrl);
+    
+    } else {
+    
+        alert('The link has not been prepared yet');
+    }
+    
+  });
+
+ });
+
+
 
 </script>
 </body>
