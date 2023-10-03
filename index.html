@@ -55,24 +55,20 @@
 			
 		}
 
+      
       #menu {
-          padding-top: 2vw;
-          padding-bottom: 2vw;
-          background: rgb(71,78,96);
-          margin: 0 0 2vw 0;
-          border-radius: 2%;
-          width: 90vw;
-      }
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       width: 100vw;
+       margin: 5vw 0 1vw 0;
+       padding: 0;
+    }
 
       #button {
         font-size: 1.5vw;
-        width: 100%;
-        text-align: left;
         margin: 0;
-        padding-top: 2vw;
-        padding-bottom: 2vw;
-        padding-left: 4vw;
-        box-sizing: border-box;
+        padding: 2vw;
         font-family: font;
         color: rgba(248,255,255,0.8);
     }
@@ -134,6 +130,7 @@
             width: 100vw;
             color: #DDE6ED;
             opacity: 60%;
+            font-family: font;
         }
         
         
@@ -192,6 +189,7 @@
             padding: 0;
             color: #ffffff;
             opacity: 50%;
+            font-family: font;
         }
         
         
@@ -202,10 +200,8 @@
         color: #ffffff;
         opacity: 40%;
         overflow-wrap: break-word;
+        font-family: font;
         }
-
-
-
 
 </style>
 </head>
@@ -217,16 +213,16 @@
 	<div id="description">
 		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses. You can get to know us more, via:
   </div>
-  <div class="buttons" id="menu"></div>
   
   <p id="mTitle">COMPANY MANAGERS</p>
     <div id="managers"></div>
     </div>
-  
+    <div class="buttons" id="menu"></div>
 	<div id="footer">
 		<div class="social-media" id="social-media-list"></div>
 		<p id="copyright">BCOVATE • © 2023</p>
-	</div>
+	</div>	
+
 	<script>
 	
 		
@@ -250,7 +246,7 @@ pageLink:"/managers",
 pageName: "Company Managers"*/
 },{	
 pageLink:"/hq",
-pageName: "Headquarters/Address"
+pageName: "HQ/Address"
 },{	
 pageLink:"/Terms-and-Conditions",
 pageName: "Terms and Conditions"
