@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>BCOVATE</title>
-	<link rel="icon" type="image/x-icon" href="/src/logo-square.ico">
+	<link rel="icon" type="image/x-icon" href="/src/favicon.ico">
 	<style>
 
      @font-face {
@@ -12,39 +12,42 @@
 		body {
 			margin: 0;
 			padding: 0;
-			background: #151e25;
+			background: #fcffff;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			user-select: none;
 		}				
 
-			#logo {
-    width: 100vw;
-    height: 76vw;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(30,38,45);    
-		background-image: url(/src/logo-in-wall.jpg);
-		}
-    
+    #bcovate {
+    margin: 0;
+    padding: 5vw 5vw 5vw 5vw;
+    text-align: left;
+			font-size: 5vw;
+			color: rgba(255,255,255,0.9);
+			font-family: font;
+			width: 90vw;
+        background: #0066cb
+    }
+
 
 		#title {
-			width: 100vw;
-			    padding: 0;
-			    padding-top:5vw;
-			    padding-bottom:5vw;
+			width: 90vw;
+			padding: 5vw 5vw 5vw 5vw;
 			margin: 0;
-			text-align: center;
-			font-size: 4vw;
-			color: rgba(255,255,255,0.7);
+			text-align: left;
+			font-size: 8vw;
+			color: rgba(255,255,255,0.9);
 			font-family: font;
+			background: #0066cb;
+			white-space: pre-line;
+			font-weight: bold;			
 		}
 
 		#description {
 			padding: 5vw;
-			font-size: 1.5vw;
-			color: rgba(255,255,255,0.5);
+			font-size: 5vw;
+			color: rgba(0,0,0,0.5);
 			font-family: font;
 		}
 
@@ -61,20 +64,20 @@
        flex-wrap: wrap;
        justify-content: center;
        width: 100vw;
-       margin: 5vw 0 1vw 0;
+       margin: 0 0 1vw 0;
        padding: 0;
     }
 
       #button {
-        font-size: 3vw;
+        font-size: 2vw;
         margin: 0;
         padding: 2vw;
         font-family: font;
-        color: rgba(248,255,255,0.7);
+        color: rgba(17,0,0,0.8);
     }
 
       #button:active {
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgba(0,0,0,0.1);
       }
       
       
@@ -83,29 +86,26 @@
 			flex-direction: row;
 			align-items: center;
 			display: grid;
-			grid-template-columns: repeat(8, 1fr);
+			grid-template-columns: repeat(10, 1fr);
 			justify-items: center;
-			padding-left: 2vw;
-			padding-right: 2vw;
+			padding-left: 3vw;
+			padding-right: 3vw;
 			margin: 0;
 		}
 
 		.social-media div {
-			width: 8vw;
-			height: 8vw;
+			width: 7vw;
+			height: 7vw;
 			padding: 0;
-			filter: opacity(80%);
-			margin-top: 4vw;
+			margin-top: 2vw;
 			border: 0.3vw solid #000000;
-			border-radius: 15%;
+			border-radius: 5%;
 			background-size: cover;
-    transition: border-radius 0.2s ease;
-    filter: invert(100%);
-    opacity: 60%;
+    opacity: 70%;
 		}		
 
 		.social-media div:active {
-			border-radius: 50%;
+			background-color: rgba(0,0,0,0.1);
 		}
 
     #copyright {
@@ -114,7 +114,7 @@
 			margin: 0;
 			text-align: center;
 			font-size: 1vw;
-			color: rgba(255,255,255,0.5);
+			color: rgba(0,0,0,0.5);
 			padding-top: 5vw;
 			padding-bottom: 5vw;
 			font-family: font;	
@@ -122,13 +122,13 @@
 
 
 
-#mTitle {
+      #mTitle {
             margin: 0;
-            padding: 5vw 0 5vw 0;
+            padding: 5vw 0 0 0;
             font-size: 5vw;
             text-align: center;
             width: 100vw;
-            color: #DDE6ED;
+            color: rgba(0,0,0,0.8);
             opacity: 60%;
             font-family: font;
         }
@@ -150,7 +150,7 @@
         
         
         #card {
-          margin: 0 5vw 0 0;
+          margin: 5vw 5vw 5vw 0;
           padding: 0;
           border-radius: 2vw;
           min-width: 80vw;
@@ -159,8 +159,10 @@
 			    flex-direction: column;
 			    justify-content: center; 
 			    align-items: center;
-			    background-color: #526D82;
+			    background-color: rgba(0,0,0,0.1);
 			    transition: scale 0.2s ease;
+	box-shadow: 0.5vw 0.5vw 2vw rgba(0,0,0,0.1);
+	
         }
         
         
@@ -187,7 +189,7 @@
             font-size: 7vw;
             margin: 0;
             padding: 0;
-            color: #ffffff;
+            color: #000000;
             opacity: 50%;
             font-family: font;
         }
@@ -197,26 +199,35 @@
         font-size: 4vw;
         margin: 0 0 3vw 0;
         padding: 5vw;
-        color: #ffffff;
+        color: #000000;
         opacity: 40%;
         overflow-wrap: break-word;
         font-family: font;
         }
 
+    #line {
+        
+        width: 90vw;
+        height: 0.3vw;
+        background-color: rgba(0,0,0,0.3);
+        transform: rotate(-2deg);
+    }
+
+
 </style>
 </head>
 <body>
-    
+    <p id="bcovate">BCOVATE</p>
   <pre id="title">Get all your work done from one place</pre>
-	<div id="logo"></div>
 
 	<div id="description">
-		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses. You can get to know us more, via:
+		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses.
   </div>
+  
+  <div id="line"></div>
   
   <p id="mTitle">COMPANY MANAGERS</p>
     <div id="managers"></div>
-    </div>
     <div class="buttons" id="menu"></div>
 	<div id="footer">
 		<div class="social-media" id="social-media-list"></div>
@@ -335,7 +346,12 @@ socialMediaList.forEach(item => {
   socialMediaContainer.appendChild(divElement);
 
   divElement.addEventListener('click', () => {
+  
+  if (window.confirm('open "' + item.link + '" ?')) {
     window.open(item.link);
+      }
+
+    
   });
  });
 
