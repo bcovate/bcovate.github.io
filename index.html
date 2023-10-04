@@ -17,7 +17,9 @@
 			flex-direction: column;
 			align-items: center;
 			user-select: none;
-		}				
+			opacity: 0;
+		}
+		
 
     #bcovate {
     margin: 0;
@@ -27,7 +29,8 @@
 			color: rgba(255,255,255,0.9);
 			font-family: font;
 			width: 90vw;
-        background: #0066cb
+			background: #0066cb;
+		 box-shadow: 0 0 10vw 30vw #0066cb;
     }
 
 
@@ -39,7 +42,6 @@
 			font-size: 8vw;
 			color: rgba(255,255,255,0.9);
 			font-family: font;
-			background: #0066cb;
 			white-space: pre-line;
 			font-weight: bold;			
 		}
@@ -47,9 +49,11 @@
 		#description {
 			padding: 5vw;
 			font-size: 5vw;
-			color: rgba(0,0,0,0.5);
+			color: #001442;
+			opacity: 70%;
 			font-family: font;
 		}
+		
 
 		#footer {
 			width: 100%;
@@ -161,7 +165,8 @@
 			    align-items: center;
 			    background-color: rgba(0,0,0,0.1);
 			    transition: scale 0.2s ease;
-	box-shadow: 0.5vw 0.5vw 2vw rgba(0,0,0,0.1);
+	box-shadow: 0 0 2vw #cccccc;
+	border: 0.5vw solid #aaaaaa;
 	
         }
         
@@ -219,7 +224,6 @@
 <body>
     <p id="bcovate">BCOVATE</p>
   <pre id="title">Get all your work done from one place</pre>
-
 	<div id="description">
 		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses.
   </div>
@@ -303,9 +307,9 @@ const socialMediaList = [{
 },{
   "link":"https://tiktok.com/@bcovate",
   "icon":"tt"
-},{
+/*},{
   "link":"https://github.com/bcovate",
-  "icon":"gh"
+  "icon":"gh"*/
 },{
   "link":"https://t.me/bcovate",
   "icon":"tg"
@@ -416,6 +420,27 @@ mList.forEach(item => {
   });
 
  });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  var opacityValue = 0;
+  var myElement = document.body;
+
+
+  var interval = setInterval(function () {
+    if (opacityValue >= 1) {
+      clearInterval(interval);
+
+    } else {
+      opacityValue += 0.01;
+
+      myElement.style.opacity = opacityValue;
+
+    }
+  }, 10);
+});
+
 
 
 
