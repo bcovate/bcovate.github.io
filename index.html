@@ -17,14 +17,14 @@
 			flex-direction: column;
 			align-items: center;
 			user-select: none;
-			opacity: 0;
 		}
 		
 
-    #bcovate {
+    #pageName {
     margin: 0;
-    padding: 5vw 5vw 5vw 5vw;
+    padding: 5vw 5vw 0 5vw;
     text-align: left;
+    justify-content: center;
 			font-size: 5vw;
 			color: rgba(255,255,255,0.9);
 			font-family: font;
@@ -58,8 +58,8 @@
 		#footer {
 			width: 100%;
 			height: wrap;
-			padding-bottom: 0vw;
-			
+			padding: 0;
+			background: #333333;
 		}
 
       
@@ -68,7 +68,7 @@
        flex-wrap: wrap;
        justify-content: center;
        width: 100vw;
-       margin: 0 0 1vw 0;
+       margin: 0;
        padding: 0;
     }
 
@@ -77,51 +77,49 @@
         margin: 0;
         padding: 2vw;
         font-family: font;
-        color: rgba(17,0,0,0.8);
+        color: #aaaaaa;
     }
 
       #button:active {
-        background-color: rgba(0,0,0,0.1);
+        background-color: #444444;
       }
       
       
-		.social-media {
-		display: flex;
+		#social-media-list {
 			flex-direction: row;
 			align-items: center;
 			display: grid;
-			grid-template-columns: repeat(10, 1fr);
+			grid-template-columns: repeat(9, 1fr);
 			justify-items: center;
-			padding-left: 3vw;
-			padding-right: 3vw;
-			margin: 0;
+			padding: 2vw 2vw 0 2vw;
+			margin: 0 0 3vw 0;
 		}
 
-		.social-media div {
-			width: 7vw;
-			height: 7vw;
+		#smi {
+			width: 8vw;
+			height: 8vw;
 			padding: 0;
+			margin: 0;
 			margin-top: 2vw;
 			border: 0.3vw solid #000000;
-			border-radius: 5%;
+			border-radius: 1vw;
 			background-size: cover;
-    opacity: 70%;
+    opacity: 60%;
+    filter: invert(100%);
 		}		
 
-		.social-media div:active {
-			background-color: rgba(0,0,0,0.1);
+		#smi:active {
+			background-color: #aaaaaa;
 		}
 
     #copyright {
-			width: 100%;
+			width: 100vw;
 			padding: 0;
-			margin: 0;
+			margin: 5vw 0 3vw 0;
 			text-align: center;
-			font-size: 1vw;
-			color: rgba(0,0,0,0.5);
-			padding-top: 5vw;
-			padding-bottom: 5vw;
-			font-family: font;	
+			font-size: 3vw;
+			color: #aaaaaa;
+			font-family: font;
 		}
 
 
@@ -172,7 +170,6 @@
         
         
         #card:active {
-        
         scale: 95%;
         
         }
@@ -211,7 +208,6 @@
         }
 
     #line {
-        
         width: 90vw;
         height: 0.3vw;
         background-color: rgba(0,0,0,0.3);
@@ -222,7 +218,7 @@
 </style>
 </head>
 <body>
-    <p id="bcovate">BCOVATE</p>
+    <p id="pageName">BCOVATE</p>
   <pre id="title">Get all your work done from one place</pre>
 	<div id="description">
 		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses.
@@ -232,11 +228,11 @@
   
   <p id="mTitle">COMPANY MANAGERS</p>
     <div id="managers"></div>
-    <div class="buttons" id="menu"></div>
 	<div id="footer">
-		<div class="social-media" id="social-media-list"></div>
-		<p id="copyright">BCOVATE • © 2023</p>
-	</div>	
+	    <p id="copyright">BCOVATE • © 2023</p>
+	    <div id="menu"></div>
+		<div id="social-media-list"></div>
+	</div>			
 
 	<script>
 	
@@ -307,9 +303,9 @@ const socialMediaList = [{
 },{
   "link":"https://tiktok.com/@bcovate",
   "icon":"tt"
-/*},{
+},{
   "link":"https://github.com/bcovate",
-  "icon":"gh"*/
+  "icon":"gh"
 },{
   "link":"https://t.me/bcovate",
   "icon":"tg"
@@ -317,7 +313,7 @@ const socialMediaList = [{
   "link":"https://discord.com/users/bcovate",
   "icon":"dc"
 },{
-  "link":"whatsapp://send/?phone=XXXXXXXXXX",
+  "link":"whatsapp://channel/0029Va0tUX8BvvsacDHzsx2R",
   "icon":"wa"
 },{
   "link":"https://pinterest.fr/bcovate",
@@ -343,6 +339,8 @@ socialMediaList.forEach(item => {
 
   const divElement = document.createElement('div');
   
+  divElement.id = 'smi';
+  
   var url = 'url(' + '/src/' + item.icon + '.png)'
   
   divElement.style.backgroundImage = url;
@@ -351,10 +349,7 @@ socialMediaList.forEach(item => {
 
   divElement.addEventListener('click', () => {
   
-  if (window.confirm('open "' + item.link + '" ?')) {
-    window.open(item.link);
-      }
-
+  window.open(item.link);
     
   });
  });
@@ -422,30 +417,6 @@ mList.forEach(item => {
  });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  var opacityValue = 0;
-  var myElement = document.body;
-
-
-  var interval = setInterval(function () {
-    if (opacityValue >= 1) {
-      clearInterval(interval);
-
-    } else {
-      opacityValue += 0.01;
-
-      myElement.style.opacity = opacityValue;
-
-    }
-  }, 10);
-});
-
-
-
-
 </script>
-
-	<script type="text/javascript"> var infolinks_pid = 3406700; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </body>
 </html>
