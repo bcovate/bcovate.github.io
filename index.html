@@ -1,248 +1,158 @@
 <html>
 <head>
-	<title>BCOVATE</title>
-	<link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+<title>BCOVATE</title>
+<link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+
 	<style>
 
      @font-face {
   font-family: font;
   src: url(/src/font.ttf);
 }
-
-		body {
-			margin: 0;
-			padding: 0;
-			background: #fcffff;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			user-select: none;
-		}
-		
-
-    #pageName {
-    margin: 0;
-    padding: 5vw 5vw 0 5vw;
-    text-align: left;
-    justify-content: center;
-			font-size: 5vw;
-			color: rgba(255,255,255,0.9);
-			font-family: font;
-			width: 90vw;
-			background: #0066cb;
-		 box-shadow: 0 0 10vw 30vw #0066cb;
-    }
-
-
-		#title {
-			width: 90vw;
-			padding: 5vw 5vw 5vw 5vw;
-			margin: 0;
-			text-align: left;
-			font-size: 8vw;
-			color: rgba(255,255,255,0.9);
-			font-family: font;
-			white-space: pre-line;
-			font-weight: bold;			
-		}
-
-		#description {
-			padding: 5vw;
-			font-size: 5vw;
-			color: #001442;
-			opacity: 70%;
-			font-family: font;
-		}
-		
-
-		#footer {
-			width: 100%;
-			height: wrap;
-			padding: 0;
-			background: #333333;
-		}
-
-      
-      #menu {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: center;
-       width: 100vw;
-       margin: 0;
-       padding: 0;
-    }
-
-      #button {
-        font-size: 2vw;
-        margin: 0;
-        padding: 2vw;
-        font-family: font;
-        color: #aaaaaa;
-    }
-
-      #button:active {
-        background-color: #444444;
-      }
-      
-      
-		#social-media-list {
-			flex-direction: row;
-			align-items: center;
-			display: grid;
-			grid-template-columns: repeat(9, 1fr);
-			justify-items: center;
-			padding: 2vw 2vw 0 2vw;
-			margin: 0 0 3vw 0;
-		}
-
-		#smi {
-			width: 8vw;
-			height: 8vw;
-			padding: 0;
-			margin: 0;
-			margin-top: 2vw;
-			border: 0.3vw solid #000000;
-			border-radius: 1vw;
-			background-size: cover;
-    opacity: 60%;
-    filter: invert(100%);
-		}		
-
-		#smi:active {
-			background-color: #aaaaaa;
-		}
-
-    #copyright {
-			width: 100vw;
-			padding: 0;
-			margin: 5vw 0 3vw 0;
-			text-align: center;
-			font-size: 3vw;
-			color: #aaaaaa;
-			font-family: font;
-		}
-
-
-
-      #mTitle {
+    
+        
+        body {
+            background-color: #fff;
+            padding: 0;
             margin: 0;
-            padding: 5vw 0 0 0;
-            font-size: 5vw;
-            text-align: center;
-            width: 100vw;
-            color: rgba(0,0,0,0.8);
-            opacity: 60%;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        #bcovate {
+            margin: 0;
+            padding: 5vw;
+            color: #004860;
+            font-size: 6vw;
             font-family: font;
         }
-        
-        
-        #managers {
+
+        #team {
             width: 100vw;
-            margin: 0;
-            padding: 0 0 0 5vw;
-    margin: 0 auto;
-    overflow-x: auto;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-        }
-        
-        
-        #card {
-          margin: 5vw 5vw 5vw 0;
-          padding: 0;
-          border-radius: 2vw;
-          min-width: 80vw;
-          height: wrap;
-         display: flex;
-			    flex-direction: column;
-			    justify-content: center; 
-			    align-items: center;
-			    background-color: rgba(0,0,0,0.1);
-			    transition: scale 0.2s ease;
-	box-shadow: 0 0 2vw #cccccc;
-	border: 0.5vw solid #aaaaaa;
-	
-        }
-        
-        
-        #card:active {
-        scale: 95%;
-        
-        }
-        
-        
-        #img {
-        width: 30vw;
-        height: 30vw;
-        background-color: #191919;
-        margin: 10vw;
-        padding: 0;
-        border-radius: 15vw;
-        background-size: cover;
-        }
-        
-        
-        #name {
-            color: red;
-            font-size: 7vw;
+            height: 65vw;
             margin: 0;
             padding: 0;
-            color: #000000;
-            opacity: 50%;
+            background-image: url("/src/team.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #title {
+            margin: 0;
+            padding: 10vw 5vw 10vw 5vw;
+            text-align: center;
+            color: #880000;
+            font-size: 8vw;
+            font-weight: bold;
+            font-family: font;
+        }
+
+        #text {
+            margin: 0;
+            padding: 0 10vw 10vw 10vw;
+            color: #2b527b;
+            text-align: left;
+            font-size: 5vw;
+            font-family: font;
+        }
+
+        #buttons {
+            margin: 0;
+            padding: 0 0 5vw 0;
+            width: 100vw;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            justify-content: center;
+        }
+        
+        #button {
+            margin: 0vw 0vw 0 0vw;
+            padding: 0;
+            color: #000;
+            height: 16vw;
+            border: 0.5vw solid #000;
+            box-sizing: border-box;
+            width: 47vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:4vw;
             font-family: font;
         }
         
-        
-        #role {
-        font-size: 4vw;
-        margin: 0 0 3vw 0;
-        padding: 5vw;
-        color: #000000;
-        opacity: 40%;
-        overflow-wrap: break-word;
-        font-family: font;
+        #button:active {
+            background: #000;
+            color: #cfc;
         }
-
-    #line {
-        width: 90vw;
-        height: 0.3vw;
-        background-color: rgba(0,0,0,0.3);
-        transform: rotate(-2deg);
-    }
-
-
-</style>
+        
+        #footer {
+            margin: 0;
+            padding: 5vw 0 0 0;
+            background: black;
+        }
+        
+        #copyright {      
+            margin: 0;
+            padding: 0;
+            color: #ddd;
+            text-align: center;
+            font-size: 4vw;
+            font-family: font;
+        }
+        
+        #sml {
+            margin: 0;
+            padding: 5vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3vw;
+        }
+        
+        
+        #smi {
+         width: 9vw;
+         height: 9vw;
+         filter:invert(100%);
+         opacity: 0.8;
+         border-radius: 5vw;
+         border: 0.4vw solid #000;
+         padding: 1vw;
+         box-sizing: border-box;
+        }
+        
+        
+        #smi:active {
+         background: #faf;
+        }
+        
+    </style>
 </head>
 <body>
-    <p id="pageName">BCOVATE</p>
-  <pre id="title">Get all your work done from one place</pre>
-	<div id="description">
-		Bcovate is a company interested in taking on many businesses and completing them in one place. By working with it, you will not need separate companies to manage your different businesses.
-  </div>
-  
-  <div id="line"></div>
-  
-  <p id="mTitle">COMPANY MANAGERS</p>
-    <div id="managers"></div>
-	<div id="footer">
-	    <p id="copyright">BCOVATE • © 2023</p>
-	    <div id="menu"></div>
-		<div id="social-media-list"></div>
-	</div>			
+    
+    <p id="bcovate">BCOVATE</p>
+    <div id="team"></div>
+    <p id="title">All your business in one place.</p>
+    <p id="text">With BCOVATE, you can complete all your tasks in one place, in a short time, and at a lower cost.</p>
+    <div id="buttons"></div>
+    <div id="footer">
+        <p id="copyright">BCOVATE • © 2023</p>
+        <div id="sml"></div>
+    </div>
 
-	<script>
-	
-		
-		const buttonsList = [{	
+    <script>
+        
+        const buttonsList = [{	
 pageLink:"/about",
 pageName: "About Us "
 },{	
 pageLink:"/contact",
 pageName: "Contact Us"
+},{	
+pageLink:"/our-team",
+pageName: "Our Team"
 },{	
 pageLink:"/join-our-team",
 pageName: "Join Our Team"
@@ -252,15 +162,15 @@ pageName: "Our Services"
 },{	
 pageLink:"/products",
 pageName: "Our Products"
-/*},{	
-pageLink:"/managers",
-pageName: "Company Managers"*/
+},{	
+pageLink:"/partnerships",
+pageName: "Our Partnerships"
 },{	
 pageLink:"/hq",
 pageName: "HQ/Address"
 },{	
 pageLink:"/Terms-and-Conditions",
-pageName: "Terms and Conditions"
+pageName: "Terms & Conditions"
 },{	
 pageLink:"/privacy-policy",
 pageName: "Privacy Policy"
@@ -270,7 +180,7 @@ pageName: "FAQ"
 }];
 
 
-		const menu = document.getElementById('menu');
+		const buttons = document.getElementById('buttons');
 		
 buttonsList.forEach(item => {
 
@@ -280,13 +190,17 @@ buttonsList.forEach(item => {
   
   pElement.textContent = item.pageName;
   
-  menu.appendChild(pElement);
+  buttons.appendChild(pElement);
 
   pElement.addEventListener('click', () => {
     window.location.href = item.pageLink;
   });
  });
- 
+        
+        
+    </script>
+    
+    <script>
 		
 const socialMediaList = [{
   "link":"https://www.facebook.com/bcovate",
@@ -313,7 +227,7 @@ const socialMediaList = [{
   "link":"https://discord.com/users/bcovate",
   "icon":"dc"
 },{
-  "link":"whatsapp://channel/0029Va0tUX8BvvsacDHzsx2R",
+"link":"whatsapp://channel/0029Va0tUX8BvvsacDHzsx2R",
   "icon":"wa"
 },{
   "link":"https://pinterest.fr/bcovate",
@@ -333,89 +247,26 @@ const socialMediaList = [{
 }];
 
 
-		const socialMediaContainer = document.getElementById('social-media-list');
+		const sml = document.getElementById('sml');
 		
 socialMediaList.forEach(item => {
 
-  const divElement = document.createElement('div');
+  const smi = document.createElement('img');
   
-  divElement.id = 'smi';
-  
-  var url = 'url(' + '/src/' + item.icon + '.png)'
-  
-  divElement.style.backgroundImage = url;
-  
-  socialMediaContainer.appendChild(divElement);
+  smi.id = 'smi';
 
-  divElement.addEventListener('click', () => {
+  var url = '/src/' + item.icon + '.png';
+  
+  smi.src = url;
+  
+  sml.appendChild(smi);
+
+  smi.addEventListener('click', () => {
   
   window.open(item.link);
     
   });
  });
-
-
-const mList = [{
-name:"Bader Charaf",
-role:"Website designer, Coder",
-img:"url('https://badercharaf.github.io/src/logo-square.jpg')",
-mUrl:"https://bit.ly/badercharaf"
-},{	
-name:"Walid Chafai",
-role:"Graphic Designer",
-img:"url('https://files.catbox.moe/sx7uhu.png')",
-mUrl:""
-},{	
-name:"Daoum",
-role:"Producer, BeatMaker",
-img:"url('https://files.catbox.moe/pqilis.png')",
-mUrl:""
-}];
-
-
-		const managers = document.getElementById('managers');
-		
-mList.forEach(item => {
-
-
-  const img = document.createElement('div');
-  img.id = 'img';
-  img.style.backgroundImage = item.img;
-
-  const name = document.createElement('p');
-  name.id = 'name';
-  name.textContent = item.name;
-  
-  
-  const role = document.createElement('p');
-  role.id = 'role';
-  role.textContent = item.role;
-  
-  
-  const card = document.createElement('div');
-  card.id = 'card';
-  
-  card.appendChild(img);
-  card.appendChild(name);
-  card.appendChild(role);
-  managers.appendChild(card);
-  
-  
-  card.addEventListener('click', () => {
-  
-  if (item.mUrl) {
-  
-    window.open(item.mUrl);
-    
-    } else {
-    
-        alert('The link has not been prepared yet');
-    }
-    
-  });
-
- });
-
 
 </script>
 </body>
