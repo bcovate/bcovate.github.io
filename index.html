@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+    
+    <style>
+        
+        body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://files.catbox.moe/r5ns8b.jpg');
+        backdrop-filter: blur(0.3vw);
+        display: flex;            
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        
+        }
+        
+        #logo {
+            height: 70px;
+            width: 70px;
+            background: rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+            background-image: url(https://files.catbox.moe/mqtzel.png);
+            border: 1px solid #fff;
+            border-radius: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #title {
+            color: #fff;
+            margin: 20px 0 15px 0;
+            padding: 0;
+        }
+        
+        #line {
+            width: 250px;
+            height: 1px;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #text {
+            width: 250px;
+            text-align: center;
+            color: #fff;
+            margin: 15px 0 20px 0;
+            padding: 0;
+        }
+        
+        #sml {
+            width: 100%;
+            height: auto;
+            padding: 0 2vw 3vw 2vw;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2vw;
+        }
+        
+        #smi {
+            
+            width: 25px;
+            height: 25px;
+        border-radius: 100%;
+        border: 1px solid #000;
+        padding: 3px;
+        margin: 0;
+        background: rgba(255,255,255,0.15);
+        box-sizing: border-box;
+        filter: invert(100%);
+        }
+        
+        #smi:active {
+        opacity: 0.8;
+        }
+        
+    </style>
+    
+</head>
+<body>
+ 
+ <div id="logo"></div>
+    <p id="title">Coming Soon...</p>
+    <div id="line"></div>
+    <p id="text">We are currently working on physical services.</p>
+    <div id="sml"></div>
+    
+    
+    <script>		const socialMediaList = [{ "link":"https://www.facebook.com/bcovate", "icon":"fb"},{ "link":"https://instagram.com/bcovate", "icon":"ig"},{ "link":"https://twitter.com/bcovate", "icon":"tw"},{ "link":"https://snapchat.com/add/bcovate", "icon":"sc"},{ "link":"https://tiktok.com/@bcovate", "icon":"tt"},{ "link":"https://github.com/bcovate", "icon":"gh"},{ "link":"https://t.me/bcovate", "icon":"tg"},{ "link":"https://discord.com/users/bcovate", "icon":"dc"},{"link":"whatsapp://channel/0029Va0tUX8BvvsacDHzsx2R", "icon":"wa"},{ "link":"https://pinterest.fr/bcovate", "icon":"pt"},{ "link":"https://reddit.com/u/bcovate", "icon":"rd"},{ "link":"https://www.linkedin.com/in/bcovate", "icon":"li"},{ "link": "https://mastodon.online/@bcovate", "icon": "mtd"},{ "link":"https://youtube.com/@bcovate", "icon":"yt"}];
+
+		const sml = document.getElementById('sml');		socialMediaList.forEach(item => {
+const smi = document.createElement('img'); smi.id = 'smi';
+var url = 'https://bcovate.com/src/' + item.icon + '.png'; smi.src = url; sml.appendChild(smi);
+smi.addEventListener('click', () => { window.open(item.link); }); });
+</script>
+    
+    
+</body>
+</html>
